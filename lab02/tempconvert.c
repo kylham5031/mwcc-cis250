@@ -4,7 +4,7 @@ void fahrenheit2celsius(float fFahrenheitIn)
 {
   float fCelsiusOut = (fFahrenheitIn - 32) * 5 / 9;
 
-  printf("%.2f degrees Clesius\n", fCelsiusOut);
+  printf("%.2f degrees Celsius\n", fCelsiusOut);
 
   return;
 }
@@ -20,7 +20,6 @@ void celsius2fahrenheit(float fCelsiusIn)
 
 int main()
 {
-  float fCelsiusOut = 0;
 
   int UserSelect = 0;
 
@@ -66,12 +65,5 @@ int main()
   }
   while (UserSelect != 3);
 
-
-  /*
-  fCelsiusOut = fahrenheit2celsius(100);
-
-  printf ("%.2f degrees Celsius\n", fCelsiusOut);
-
-*/
   return 0;
 }
