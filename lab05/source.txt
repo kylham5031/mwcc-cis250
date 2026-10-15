@@ -1,0 +1,2 @@
+Hello, this is the lab05 test file
+I am testing the copy2 program
