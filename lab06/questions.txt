@@ -44,4 +44,4 @@ If the test program cannot be executed, the child process should report the erro
 
 Question 8: In a real-life test engineering scenario, what problems could arise if the parent launched all tests without waiting for them to finish? 
 
-If the tests ran at the same time, these tests could interfere with the results of each other test. Hardware will be competed for along with resources and outputs could be mixed together. It makes each test more accurate. 
+If the tests ran at the same time, these tests could interfere with the results of each other test. Hardware will be competed for along with resources and outputs could be mixed together. It makes each test more accurate when run separately. 
