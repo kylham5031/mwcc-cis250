@@ -1,0 +1,6 @@
+pwd
+date
+ls -1
+df -h
+ps -eo pid,ppid,comm
+

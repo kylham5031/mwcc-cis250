@@ -1,0 +1,29 @@
+Lab 06 Test Observations
+
+Experiment 1: Normal Execution
+
+Running the test_runner using the tests.txt file executed all 5 commands in the correct order. while the summary displayed 5 tests executed, 5 passed, and 0 failed.
+
+=================================================================================================================================================================================================================================
+
+Experiment 2: # Comment Execution
+
+At the bottom of tests.txt, I added "# Comment". When ran again, the program ignored the comment and executed the correct 5 tests, 5 passed, and 0 failed. 
+
+=================================================================================================================================================================================================================================
+
+Experiment 3: Invalid_test_program
+
+Under df -h I added Invalid_test_program since this did not exist. During execution it marked this test as FAIL and continued to test the rest of the commands. The summary showed 6 tests executed, 5 passed, and 1 failed.
+
+=================================================================================================================================================================================================================================
+
+Experiment 4: Re order commands
+
+I put date at the beginning of the tests and pwd at the very end. When executed they did it in the correct order with pwd being ran last. The summary showed 5 tests again, and all 5 passed.
+
+=================================================================================================================================================================================================================================
+
+Experiment 5: Rename tests.txt
+
+tests.txt was renamed to backup.txt so that the file was not located. The file could not be located as it no longer existed, and displayed a file opening error. 

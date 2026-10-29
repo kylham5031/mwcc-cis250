@@ -1,0 +1,47 @@
+Lab 06 Written Questions
+
+Question 1: Why does the test runner use fgets() to read the test plan?
+
+fgets() reads the file one line at a time, allowing the program to run each test command separately. 
+
+=========================================================================================================================================
+
+Question 2: Why must each command be parsed into an argument array before calling execvp()?
+
+execvp() needs commands and arguments in an array. Parsing separates the command and its options so this can be executed correctly.
+
+=========================================================================================================================================
+
+Question 3: What values can fork() return, and what does each value mean?
+
+fork() can return a value of -1 if it fails, a 0 in the child process, and a positive number in the parent process, this is the PID of the child process. 
+
+=========================================================================================================================================
+
+Question 4: What happens to the child process when execvp() succeeds?
+
+The child process is replaced by the program that was or is being executed. When execvp() succeeds, it does not return to the original code. 
+
+=========================================================================================================================================
+
+Question 5: Why must the parent call wait() before launching the next test?
+
+wait() makes sure the tests run one at a time instead of all 5 at once, it makes it wait for the last test to finish before beginning the next.
+
+==========================================================================================================================================
+
+Question 6: How does the test runner determine whether a test passed or failed?
+
+The test runner determines whether a test passed or failed by using WIFEXITED() and WEXITSTATUS(). If the child process exits normally with a status of 0, it passes. If not, it fails. 
+
+===========================================================================================================================================
+
+Question 7: What should happen when a test program cannot be executed? Explain why the runner should continue or stop.
+
+If the test program cannot be executed, the child process should report the error and exit with a non zero status. The runner should continue so that the parent process can run the remaining tests so all of them are checked.
+
+===========================================================================================================================================
+
+Question 8: In a real-life test engineering scenario, what problems could arise if the parent launched all tests without waiting for them to finish? 
+
+If the tests ran at the same time, these tests could interfere with the results of each other test. Hardware will be competed for along with resources and outputs could be mixed together. It makes each test more accurate. 
